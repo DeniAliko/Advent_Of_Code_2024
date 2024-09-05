@@ -25,3 +25,4 @@ def printList(listToPrint):
     '''Prints a list, item by item'''
     for item in listToPrint:
         print(item)
+
