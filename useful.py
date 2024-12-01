@@ -2,7 +2,7 @@
 
 def openFile(dayNumber):
     '''Returns a list of the lines of a saved text input for a given day'''
-    file = open(dayNumber + ".txt")
+    file = open(str(dayNumber) + ".txt")
     inputFile = []
     linesInFile = file.readlines()
     for i in linesInFile:
