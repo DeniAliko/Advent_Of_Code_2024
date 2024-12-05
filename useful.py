@@ -18,7 +18,7 @@ def createGrid(listOfStrings):
     grid = {}
     for i in range(0, len(listOfStrings)):
         for j in range(0, len(listOfStrings[i])):
-            grid[listOfStrings[i][j]] = [j, i]
+            grid[[j, i]] = listOfStrings[i][j]
     return grid
 
 def printList(listToPrint):
