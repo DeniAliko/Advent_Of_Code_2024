@@ -65,5 +65,4 @@ for l in range(75):
 final = 0
 for key in freqDict.keys():
     final += freqDict[key]
-
 print(final)
