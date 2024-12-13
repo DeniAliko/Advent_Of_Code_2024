@@ -59,31 +59,6 @@ for region in regions:
 print(score)
 # part 2:
 
-def getNeighborsDiag(tuple):
-    x = tuple[0]
-    y = tuple[1]
-    neighbors = []
-    dneighbors = []
-    if x < len(data)-1 and (grid[(x+1,y)] == grid[(x,y)]):
-        neighbors.append((x+1, y))
-    if x > 0 and (grid[(x-1,y)] == grid[(x,y)]):
-        neighbors.append((x-1, y))
-    if y < len(data[0])-1 and (grid[(x,y+1)] == grid[(x,y)]):
-        neighbors.append((x, y+1))
-    if y > 0 and (grid[(x,y-1)] == grid[(x,y)]):
-        neighbors.append((x, y-1))
-
-    if x < len(data)-1 and y < len(data[0])-1 and (grid[(x+1,y+1)] == grid[(x,y)]):
-        dneighbors.append((x+1, y+1))
-    if x > 0 and y < len(data[0])-1 and (grid[(x-1,y+1)] == grid[(x,y)]):
-        dneighbors.append((x-1, y+1))
-    if x > 0 and y < y > 0 and (grid[(x-1,y-1)] == grid[(x,y)]):
-        dneighbors.append((x-1, y-1))
-    if x < len(data)-1 and y > 0 and (grid[(x+1,y-1)] == grid[(x,y)]):
-        dneighbors.append((x+1, y-1))
-
-    return [neighbors, dneighbors]
-
 score = 0
 for region in regions:
     corners = 0
