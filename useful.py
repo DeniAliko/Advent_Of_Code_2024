@@ -11,9 +11,7 @@ def openFile(dayNumber):
 
 def createGrid(listOfStrings):
     '''Given a list of strings, turns that into a grid dictionary.
-    \n    [0, 0] [1, 0] [2, 0]
-    \n    [0, 1] [1, 1] [2, 1]
-    \n    [0, 2] [1, 2] [2, 2]
+        \n first coordinate is position in list, second coordinate is position in sublist
     '''
     grid = {}
     for i in range(0, len(listOfStrings)):
