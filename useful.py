@@ -24,3 +24,22 @@ def printList(listToPrint):
     for item in listToPrint:
         print(item)
 
+def bronKerbosch(R, P, X, connections, max = []):
+    '''Finding the maximal subcliques of a graph, connections is a dictionary of neighbors'''
+    if len(P) == 0 and len(X) == 0:
+        max.append(R)
+
+    else:
+        for x in P:
+            pIntN = []
+            xIntN = []
+            for i in connections[x]:
+                if i in P:
+                    pIntN.append(i)
+                if i in X:
+                    xIntN.append(i)
+            bronKerbosch(R + [x], pIntN, xIntN, connections, max)
+            P.remove(x)
+            X.append(x)
+
+    return max
